@@ -1,6 +1,7 @@
 import React from 'react';
 import Scrollspy from 'react-scrollspy';
 import Scroll from '../Scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Nav({ sections = [] }) {
   return (
@@ -16,7 +17,10 @@ export default function Nav({ sections = [] }) {
               <li key={s.id}>
                 <Scroll type="id" element={s.id}>
                   <a href={`#${s.id}`} id="top-link">
-                    <span className={`icon ${s.icon}`}>{s.name}</span>
+                    <span className={`icon fab ${s.icon}`}>
+                      <FontAwesomeIcon icon={s.icon} />
+                      {s.name}
+                    </span>
                   </a>
                 </Scroll>
               </li>

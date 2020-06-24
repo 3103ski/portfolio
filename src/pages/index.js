@@ -1,4 +1,16 @@
 import React from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import {
+  faEnvelope,
+  faKey,
+  faRocket,
+  faSatelliteDish,
+  faObjectGroup,
+  faListAlt,
+  faHome,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons';
 
 import Layout from '../components/Layout';
 import PageFooter from '../components/PageFooter';
@@ -13,11 +25,27 @@ import pic7 from '../assets/images/pic07.jpg';
 import pic8 from '../assets/images/pic08.jpg';
 import Scroll from '../components/Scroll';
 
+library.add(
+  fab,
+  faEnvelope,
+  faKey,
+  faRocket,
+  faSatelliteDish,
+  faObjectGroup,
+  faListAlt,
+  faHome,
+  faUser
+);
+
 const sections = [
-  { id: 'top', name: 'Intro', icon: 'fa-home' },
-  { id: 'portfolio', name: 'Portfolio', icon: 'fa-th' },
-  { id: 'about', name: 'About Me', icon: 'fa-user' },
-  { id: 'contact', name: 'Contact', icon: 'fa-envelope' },
+  { id: 'top', name: 'Intro', icon: ['fa', 'home'] },
+  { id: 'websites', name: 'Websites', icon: 'satellite-dish' },
+  { id: 'web-apps', name: 'Web Apps', icon: 'rocket' },
+  { id: 'design', name: 'Design Work', icon: 'object-group' },
+  { id: 'vanilla-javascript', name: 'Javascript', icon: ['fab', 'js'] },
+  { id: 'about', name: 'About Me', icon: ['fa', 'user'] },
+  { id: 'skills', name: 'Skill Summary', icon: 'list-alt' },
+  { id: 'contact', name: 'Contact', icon: 'envelope' },
 ];
 
 const IndexPage = () => (
@@ -28,12 +56,13 @@ const IndexPage = () => (
       <section id="top" className="one dark cover">
         <div className="container">
           <header>
-            <h2 className="alt">
-              Hi! I'm <strong>Anubhav</strong>
-              <br />
-              Web developer
-            </h2>
-            <p>I have made few things check it out.</p>
+            <h2 className="alt">Bryan Jastrzembski</h2>
+            <p>
+              Web Development and Design. If you need help building a website
+              for your business, need design work, want to collaborate on a
+              project, or are an employer considering me for work, you can
+              browse most of what I've done here.
+            </p>
           </header>
 
           <footer>
@@ -46,7 +75,79 @@ const IndexPage = () => (
         </div>
       </section>
 
-      <section id="portfolio" className="two">
+      <section id="websites" className="two">
+        <div className="container">
+          <header>
+            <h2>Portfolio</h2>
+          </header>
+
+          <p>
+            Life will feel it is always a great need for eu valley, the valley
+            CNN ridiculous smile at any time chat mainstream clinical homes.
+            Mauris floor was very warm and we need it. One customer now nibh
+            Bureau dark pools behavior.
+          </p>
+
+          <div className="row">
+            <div className="col-4 col-12-mobile">
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={pic2} alt="" />
+                </a>
+                <header>
+                  <h3>Ipsum Feugiat</h3>
+                </header>
+              </article>
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={pic3} alt="" />
+                </a>
+                <header>
+                  <h3>Rhoncus Semper</h3>
+                </header>
+              </article>
+            </div>
+            <div className="col-4 col-12-mobile">
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={pic4} alt="" />
+                </a>
+                <header>
+                  <h3>Magna Nullam</h3>
+                </header>
+              </article>
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={pic5} alt="" />
+                </a>
+                <header>
+                  <h3>Natoque Vitae</h3>
+                </header>
+              </article>
+            </div>
+            <div className="col-4 col-12-mobile">
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={pic6} alt="" />
+                </a>
+                <header>
+                  <h3>Dolor Penatibus</h3>
+                </header>
+              </article>
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={pic7} alt="" />
+                </a>
+                <header>
+                  <h3>Orci Convallis</h3>
+                </header>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="vanilla-javascript" className="two">
         <div className="container">
           <header>
             <h2>Portfolio</h2>

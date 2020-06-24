@@ -10,7 +10,9 @@ export default function Footer({ title, heading, avatar }) {
         </span>
 
         <h1 id="title">{title}</h1>
+        <h1 id="title">Jastrzembski</h1>
         <p>{heading}</p>
+        <p>Seattle, Wa</p>
       </Link>
     </div>
   );
